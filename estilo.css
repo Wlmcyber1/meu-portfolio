@@ -1,0 +1,236 @@
+/* --- RESET E PADRÕES --- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a; /* Fundo bem escuro para realçar o efeito premium */
+    color: aliceblue; 
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- HEADER DINÂMICO --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    transition: all 0.4s ease;
+}
+
+/* Classe aplicada via JS ou para teste de scroll */
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-bar ul li:hover {
+    cursor: pointer;
+    color: #a29bfe; /* Cor de destaque no hover */
+    transition: 0.3s;
+}
+
+/* --- SEÇÃO INICIAL (O EFEITO VAZADO) --- */
+.apresention-inicial {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* Configuração da imagem de fundo */
+    background-image: url('assets/Reflect.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax suave */
+}
+
+.apresention-inicial h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    
+    /* Efeito de texto transparente com fundo aparecendo */
+    background: url('assets/image_0.png');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: rgba(255, 255, 255, 0.5);
+    
+    /* Borda fina para dar leitura caso o fundo seja claro */
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    filter: drop-shadow(0 0 20px rgba(130, 87, 229, 0.9));
+}
+
+.apresention-inicial p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: rgba(240, 248, 255, 0.8);
+}
+
+/* --- BOTÕES --- */
+.botoes {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.primeiro_botao, .segundo_botao {
+    padding: 15px 35px;
+    border-radius: 50px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primeiro_botao {
+    background-color: white;
+    color: black;
+}
+
+.primeiro_botao .fa-arrow-right {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.segundo_botao {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.primeiro_botao:hover, .segundo_botao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* --- TÍTULOS COM LINHA (SERVIÇOS E TRABALHOS) --- */
+.tituloSecao, .works h1 {
+    display: table; /* Truque para a linha ter o tamanho do texto */
+    margin: 80px auto 40px; 
+    font-size: 50px;
+    font-weight: 600;
+    border-bottom: 3px solid rgba(130, 87, 229, 0.6); /* Linha roxa suave */
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* --- GRID DE SERVIÇOS --- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.card-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.card-item i {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #a29bfe;
+}
+
+.card-item h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card-item p {
+    font-size: 14px;
+    color: rgba(240, 248, 255, 0.6);
+    line-height: 1.6;
+}
+
+.card-item:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+    transform: translateY(-10px);
+    border-color: rgba(162, 155, 254, 0.5);
+}
+
+/* --- SEÇÃO TRABALHOS --- */
+.works {
+    padding-bottom: 100px;
+}
+
+.cards-project {
+   display: flex;
+    justify-content: center;
+    gap: 4rem; /* Aumentei o espaço entre os dois projetos */
+    flex-wrap: wrap;
+    padding: 2rem;}
+
+.cards-project img, .cards-project video {
+    width: 450px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s;
+}
+
+.cards-project img:hover, .cards-project video:hover {
+    transform: scale(1.05);
+    border-color: #a29bfe;
+}
+.project-info h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: rgba(240, 248, 255, 0.6);
+    line-height: 1.5;
+    margin-top: 12px;
+}
+.project-info {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 10px;
+}
