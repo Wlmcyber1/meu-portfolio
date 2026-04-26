@@ -257,3 +257,94 @@ header.scrolled {
   line-height: 1.5;
   margin-top: 12px;
 }
+/* --- RESPONSIVIDADE (MOBILE) --- */
+
+@media (max-width: 768px) {
+  /* Ajuste do Título Principal */
+  .apresention-inicial h1 {
+    font-size: 3.2rem; 
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  .apresention-inicial p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* AJUSTE DOS BOTÕES (O PROBLEMA DO ALINHAMENTO) */
+  .botoes {
+    flex-direction: column; /* Um embaixo do outro */
+    align-items: center;    /* Centraliza os botões no eixo horizontal */
+    gap: 1rem;
+    width: 100%;            /* Garante que o container ocupe a largura toda */
+    padding: 0 20px;        /* Margem de segurança nas laterais */
+  }
+
+  .primeiro_botao, .segundo_botao {
+    width: 100%;            /* Faz os dois terem o mesmo tamanho */
+    max-width: 320px;       /* Mas não deixa eles ficarem gigantes em tablets */
+    padding: 15px 10px;     /* Padding vertical para o toque, menor nas laterais */
+    display: flex;          /* Para alinhar o ícone da seta internamente */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;         /* Garante a centralização absoluta */
+    font-size: 16px;
+  }
+
+  /* Ajuste específico dos Serviços */
+  .cards {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+
+  /* Ajuste das Imagens dos Trabalhos */
+  .project-info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cards-project img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px;
+  }
+
+  /* Ajuste do Menu */
+  .nav-bar ul {
+    gap: 1rem;
+    padding: 10px 20px;
+  }
+}
+/* No Desktop (PC), eles ficam lado a lado */
+.video-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* No Mobile, o vídeo cresce e fica embaixo do texto */
+@media (max-width: 992px) {
+    .video-wrapper {
+        display: flex !important;
+        flex-direction: column !important; /* Empilha os itens */
+        text-align: center;
+    }
+
+    .video-content {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .custom-video-container {
+        width: 100% !important; /* O vídeo expande para a largura total */
+        height: auto !important;
+        max-width: none !important;
+    }
+
+    .video-player {
+        width: 100% !important;
+        border-radius: 15px; /* Tira o formato de 'pílula' se quiser */
+    }
+}
