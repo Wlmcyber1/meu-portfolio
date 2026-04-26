@@ -1,35 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
-    <meta charset="pt-br" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <title>Portifolio Leticia Moreira</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Portfólio Letícia Moreira</title>
     <link rel="stylesheet" href="estilo.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <header>
         <div class="nav-container">
-            <i class="fas fa-code"></i>
+            <div class="logo">
+                <i class="fas fa-code"></i>
+            </div>
             <nav class="nav-bar">
                 <ul>
-                    <li>Inicio</li>
-                    <li>Serviços</li>
-                    <li>Trabalhos</li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#trabalhos">Trabalhos</a></li>
                 </ul>
             </nav>
             <h2>MCODE</h2>
@@ -37,100 +26,86 @@
     </header>
 
     <main>
-        <section class="apresention-inicial">
+        <section class="apresention-inicial" id="inicio">
             <div class="intro-content">
                 <h1>Letícia Moreira</h1>
                 <p>Desenvolvedora Frontend & UI Designer</p>
                 <div class="botoes">
-                    <button class="primeiro_botao">
-                        Orcamento gratuito <i class="fas fa-arrow-right"></i>
+                    <button class="primeiro_botao" onclick="document.getElementById('servicos').scrollIntoView({behavior: 'smooth'})">
+                        Orçamento gratuito <i class="fas fa-arrow-right"></i>
                     </button>
                     <button class="segundo_botao">Entrar em contato</button>
                 </div>
             </div>
         </section>
 
-        <h1 class="tituloSecao">Serviços</h1>
+        <h1 class="tituloSecao" id="servicos">Serviços</h1>
         <section class="service">
             <div class="cards">
                 <div class="card-item">
                     <i class="fas fa-comment"></i>
                     <h3>Social Media</h3>
-                    <p>
-                        Gestão estratégica de redes sociais para aumentar o engajamento e a presença digital,
-                        conectando sua marca ao público certo com conteúdo relevante.
-                    </p>
+                    <p>Gestão estratégica de redes sociais para aumentar o engajamento e a presença digital, conectando sua marca ao público certo com conteúdo relevante.</p>
                 </div>
 
                 <div class="card-item">
                     <i class="fas fa-code"></i>
                     <h3>Programação</h3>
-                    <p>
-                        Desenvolvimento de sistemas robustos e eficientes utilizando as tecnologias mais modernas,
-                        garantindo que o código seja limpo, escalável e de fácil manutenção.
-                    </p>
+                    <p>Desenvolvimento de sistemas robustos e eficientes utilizando as tecnologias mais modernas, garantindo que o código seja limpo, escalável e de fácil manutenção.</p>
                 </div>
 
                 <div class="card-item">
                     <i class="fas fa-rocket"></i>
                     <h3>Marketing Digital</h3>
-                    <p>
-                        Estratégias focadas em conversão e crescimento, utilizando análise de dados para
-                        impulsionar o alcance da sua marca e otimizar o retorno sobre o investimento.
-                    </p>
+                    <p>Estratégias focadas em conversão e crescimento, utilizando análise de dados para impulsionar o alcance da sua marca e otimizar o retorno sobre o investimento.</p>
                 </div>
 
                 <div class="card-item">
                     <i class="fas fa-folder"></i>
                     <h3>Desenvolvimento Web</h3>
-                    <p>
-                        Criação de sites e landing pages de alta performance, com foco em velocidade de carregamento
-                        e total compatibilidade com dispositivos móveis (responsividade).
-                    </p>
+                    <p>Criação de sites e landing pages de alta performance, com foco em velocidade de carregamento e total compatibilidade com dispositivos móveis (responsividade).</p>
                 </div>
 
                 <div class="card-item">
                     <i class="fas fa-broom"></i>
                     <h3>Web Design</h3>
-                    <p>
-                        Design visual focado na identidade da marca, criando layouts modernos e limpos que
-                        transmitem profissionalismo e confiança para o usuário.
-                    </p>
+                    <p>Design visual focado na identidade da marca, criando layouts modernos e limpos que transmitem profissionalismo e confiança para o usuário.</p>
                 </div>
 
                 <div class="card-item">
                     <i class="fas fa-palette"></i>
                     <h3>UI/UX Design</h3>
-                    <p>
-                        Estudo aprofundado da experiência do usuário para criar interfaces que sejam não apenas
-                        bonitas, mas fáceis de usar e intuitivas em cada clique.
-                    </p>
+                    <p>Estudo da experiência do usuário para criar interfaces fáceis de usar e intuitivas.</p>
                 </div>
             </div>
         </section>
 
-        <section class="works">
-            <h1>Trabalhos</h1>
+        <section class="works" id="trabalhos">
+            <h1 class="tituloSecao">Trabalhos</h1>
             <div class="cards-project">
-                <div class="project-info">                
-                    <h3>Consultoria Alimentar</h3>
-                <a href="https://github.com/Wlmcyber1">
-                    <img src="assets/Captura de tela 2026-04-25 164038.png" alt="">
-                    <p>Landing page profissional desenvolvida para Monteiro Consultoria. Foco em conversão, design limpo e performance otimizada utilizando HTML5, CSS3 e JavaScript puro.</p>
+                <div class="project-item">
+                    <div class="project-media">
+                        <a href="https://github.com/Wlmcyber1" target="_blank">
+                            <img src="assets/Captura de tela 2026-04-25 164038.png" alt="Consultoria Alimentar">
+                        </a>
+                    </div>
+                    <div class="project-info">                
+                        <h3>Consultoria Alimentar</h3>
+                        <p>Landing page profissional desenvolvida para Monteiro Consultoria. Foco em conversão e performance otimizada.</p>
+                    </div>
                 </div>
-                </a>
                 
-                 
-                <div class="project-info">
-                <h3>Interface Imersiva 3D</h3>
-                <a href="http://github.com/Wlmcyber1">
-                    <img src="assets/Captura de tela 2026-04-25 204033.png" ></img>
-                    <p>Exploração de interfaces modernas com manipulação de elementos 3D via CSS e lógica JavaScript. Um projeto focado em alta interatividade e impacto visual para o usuário.</p>
-      
-                </a>
-                
-                
-                
+                <div class="project-item">
+                    <div class="project-media">
+                        <a href="http://github.com/Wlmcyber1" target="_blank">
+                            <img src="assets/Captura de tela 2026-04-25 204033.png" alt="Interface 3D">
+                        </a>
+                    </div>
+                    <div class="project-info">
+                        <h3>Interface Imersiva 3D</h3>
+                        <p>Exploração de interfaces modernas com manipulação de elementos 3D via CSS e lógica JavaScript.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -141,13 +116,12 @@
             header.classList.toggle('scrolled', window.scrollY > 0);
         });
 
-        // 1. Configuração do botão de WhatsApp
-    const btnContato = document.querySelector('.segundo_botao');
-    btnContato.addEventListener('click', () => {
-        const mensagem = encodeURIComponent("Olá Letícia, vi seu portfólio e gostaria de fazer um orçamento!");
-        const numero = "5585988652338"; // Seu número com DDI do Brasil
-        window.open(`https://wa.me/${numero}?text=${mensagem}`, '_blank');
-    });
+        const btnContato = document.querySelector('.segundo_botao');
+        btnContato.addEventListener('click', () => {
+            const mensagem = encodeURIComponent("Olá Letícia, vi seu portfólio e gostaria de fazer um orçamento!");
+            const numero = "5585988652338"; 
+            window.open(`https://wa.me/${numero}?text=${mensagem}`, '_blank');
+        });
     </script>
 </body>
 </html>
