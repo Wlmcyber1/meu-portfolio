@@ -348,3 +348,25 @@ header.scrolled {
         border-radius: 15px; /* Tira o formato de 'pílula' se quiser */
     }
 }
+/* --- AJUSTE DO NAV NO MOBILE --- */
+  .nav-container {
+    padding: 0 1rem; /* Reduz o respiro lateral para ganhar espaço */
+    justify-content: space-around; /* Distribui melhor os itens */
+  }
+
+  .nav-container h2 {
+    display: block; /* Garante que ele apareça */
+    font-size: 1rem; /* Diminui o tamanho da fonte do MCODE */
+    letter-spacing: 1px;
+    white-space: nowrap; /* Impede que o texto quebre em duas linhas */
+  }
+
+  .nav-bar ul {
+    gap: 0.8rem; /* Diminui o espaço entre Início, Serviços e Trabalhos */
+    padding: 8px 15px;
+    margin-left: 10px; /* Dá uma leve distância do logo */
+  }
+
+  .nav-bar ul li a {
+    font-size: 0.75rem; /* Diminui um pouco a letra do menu */
+  }
