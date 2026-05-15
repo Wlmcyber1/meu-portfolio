@@ -43,4 +43,4 @@ O projeto está no ar e pode ser acessado através do link abaixo:
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/Wlmcyber1/NOME_DO_SEU_REPOSITORIO.git](https://github.com/Wlmcyber1/NOME_DO_SEU_REPOSITORIO.git)
+   git clone [https://github.com/Wlmcyber1/meu-portifolio.git]
